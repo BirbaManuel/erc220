@@ -15,7 +15,9 @@ export default () => {
 			{["B","I","B"]}
 			<div>
 				<h2>Balance account 0</h2>
-				<h2>{state.accounts[0]} ether</h2>
+				<p>adress</p>
+				<h2>{state.accounts[0]}</h2>
+				<p>MIKUTANOTOKEN</p>
 				<ContractData
 					drizzle={drizzle}
 					drizzleState={state}
@@ -23,8 +25,12 @@ export default () => {
 					method="balanceOf"
 					methodArgs={[state.accounts[0]]}
 				/>
+				<p>WEI</p>
+				<p>{state.accountBalances[state.accounts[0]]}</p>
 				<h2>Balance account 1</h2>
+				<p>adress</p>
 				<h2>{state.accounts[1]}</h2>
+				<p>MIKUTANOTOKEN</p>
 				<ContractData
 					drizzle={drizzle}
 					drizzleState={state}
@@ -32,6 +38,8 @@ export default () => {
 					method="balanceOf"
 					methodArgs={[state.accounts[1]]}
 				/>
+				<p>WEI</p>
+				<p>{state.accountBalances[state.accounts[1]]}</p>
 			</div>
 			<div>
 				<h2>Transfer</h2>
