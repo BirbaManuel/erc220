@@ -12,7 +12,13 @@ export default () => {
 	console.log(state)
 	return (
 		<div className="App">
-			{["B","I","B"]}
+			{/* {["B","I","B"].map( e =>{
+				console.log(e)
+					return (<div key={}>
+						<p></p>
+					</div>);
+				}
+			)} */}
 			<div>
 				<h2>Balance account 0</h2>
 				<p>adress</p>
