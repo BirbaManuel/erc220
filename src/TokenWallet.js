@@ -9,11 +9,13 @@ const {ContractData, ContractForm } = newContextComponents;
 export default () => {
 	const { drizzle } = useDrizzle();
 	const  state = useDrizzleState(  state => state);
-	console.log(state.accounts)
+	console.log(state)
 	return (
 		<div className="App">
+			{["B","I","B"]}
 			<div>
-				<h2>Balance</h2>
+				<h2>Balance account 0</h2>
+				<h2>{state.accounts[0]} ether</h2>
 				<ContractData
 					drizzle={drizzle}
 					drizzleState={state}
@@ -21,7 +23,8 @@ export default () => {
 					method="balanceOf"
 					methodArgs={[state.accounts[0]]}
 				/>
-				<h2>Balance account 0</h2>
+				<h2>Balance account 1</h2>
+				<h2>{state.accounts[1]}</h2>
 				<ContractData
 					drizzle={drizzle}
 					drizzleState={state}
